@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_top_photo"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/top_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_bottom_left="@dimen/dimen_16dp"
+            app:riv_corner_radius_bottom_right="@dimen/dimen_16dp" />
+
+        <LinearLayout
+            android:id="@+id/l_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_56dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/iv_top_photo"
+            app:layout_constraintTop_toTopOf="@id/iv_top_photo">
+
+            <TextView
+                android:id="@+id/tv_hello"
+                style="@style/headlineSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/iv_top_photo"
+                app:layout_constraintTop_toTopOf="@id/iv_top_photo" />
+
+            <TextView
+                style="@style/headlineSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:text="@string/name_user"
+                android:textColor="@color/md_theme_light_primary"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_48dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/iv_top_photo"
+            app:layout_constraintTop_toBottomOf="@id/l_hello"
+            app:layout_constraintTop_toTopOf="@id/iv_top_photo">
+
+            <TextView
+                android:id="@+id/tv_goodMorning"
+                style="@style/headlineSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_48dp"
+                android:text="@string/good_morning"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_poses"
+            style="@style/titleMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_24dp"
+            android:text="@string/poses"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_top_photo" />
+
+        <TextView
+            android:id="@+id/tv_see_all"
+            style="@style/bodyMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_24dp"
+            android:text="@string/see_all"
+            android:textColor="@color/md_theme_light_primary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_top_photo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_poses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_poses"
+            tools:listitem="@layout/item_poses" />
+
+        <TextView
+            android:id="@+id/tv_recently_poses"
+            style="@style/titleMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_24dp"
+            android:text="@string/recently_poses"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_poses" />
+
+        <TextView
+            android:id="@+id/tv_see_all2"
+            style="@style/bodyMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_24dp"
+            android:text="@string/see_all"
+            android:textColor="@color/md_theme_light_primary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_poses" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recently_poses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recently_poses"
+            tools:listitem="@layout/item_recently_poses" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

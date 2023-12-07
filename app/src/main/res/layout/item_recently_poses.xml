@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dimen_8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/dimen_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="171dp"
+            android:layout_height="137dp"
+            android:src="@drawable/top_main"
+            android:scaleType="centerCrop"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_recently"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cv_item_post"
+        app:layout_constraintEnd_toEndOf="@id/cv_item_post"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        app:cardCornerRadius="@dimen/dimen_16dp">
+
+        <ImageView
+            android:id="@+id/iv_text_item"
+            android:layout_width="66dp"
+            android:layout_height="15dp"
+            android:src="@drawable/shape" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/poses"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dimen_8sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
